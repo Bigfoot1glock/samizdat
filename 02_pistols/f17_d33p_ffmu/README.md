@@ -3,11 +3,18 @@
 * d33pthought revision of FMDA/Ivan's G17
 
 ## changelog
+* March 24, 2020: added content this readme in future improvements section & in overview re these vs. DD-release files. rm fosscad re feedback.
 * Jan 29, 2020: moved verification from here to [new git repo](https://github.com/d33pthought42/samizdat). moved modification details to [separate file](f17_modifications.md). feedback: fosscad (f17 not included) -> d33pthought github
 * earlier Jan 2020: fixed gunstreamer links. added non-embellished frames. minor signature verification guide revision.
 
 ## overview
-This is a writeup for d33pthought's improvements to Free Men Don't Ask & Ivan's G17 model, which is patterned on the Glock G17 gen 3 frame. Included elements of this work:
+This is a writeup for d33pthought's improvements to Free Men Don't Ask & Ivan's G17 model, which is patterned on the Glock G17 gen 3 frame.
+
+### which files are which?
+* please note that I will maintain updates in my own repo at [https://github.com/d33pthought42/samizdat](https://github.com/d33pthought42/samizdat) - if you want the most uptodate information on my revision to FMDA's g17 frame, please check here.
+* my earlier updates were included in the [detterence dispensed release](https://github.com/d33pthought42/samizdat/tree/master/02_pistols/FMDA-G17-F17-Update) (kept in this repo for reference) where my revised files were mixed with some of FMDA's original releases (e.g. I only revised one screw-type design).
+
+### elements of f17 revision work:
   * git:
     * this readme: resource overview, print parameters/info, testing/feedback info
     * improved model files:
@@ -66,6 +73,8 @@ This is a writeup for d33pthought's improvements to Free Men Don't Ask & Ivan's 
 * would expect that various readily-available nylon-based filaments would not exhibit the failure noted above
 
 ## ongoing modifications thoughts
+
+### the abstract
 * when issues with fit and function - these might be classified into:
   * model problems (3d printing agnostic): e.g. pocket too large or small in model for known dimensions of part that goes into it
   * print problems: e.g. support interface artifact interfering with trigger reset via increased recoil spring friction
@@ -73,17 +82,46 @@ This is a writeup for d33pthought's improvements to Free Men Don't Ask & Ivan's 
 * identifying such setup-specific optimizations will help make this model more generalizable for printing well in different print environments
 * much of the power and appeal of 3d gun printing is in lowering of the skill/tools threshold for manufacturing compared to machining
 * thus making it easier to take the model to a functional firearm can amplify this power and appeal
-* unresolved issues:
+
+### concrete improvement areas
+* trigger friction: the most important unresolved issue
   * friction between rear trigger housing assembly & rear rails, resulting in a functional but often gritty trigger
     * with straight trigger pull gun seems to "jump" slightly to right
     * rails that have a shorter outward extension from midline might resolve this by allowing rails to be moved slightly from midline without increasing slide friction too much. without shortening this dimension of the rails though, increased slide/rear-rail friction will likely result in malfunctions. for now the gritty trigger seems preferable to malfunctions.
-  * fitment into holsters
-    * holsters like bladetech use the shape of the trigger guard to yield a tactile "click"
-    * no significant click with this version - either due to modifications to have trigger clear guard, or due to initial FMDA differences from stock g17
-
+* mag release spring tension
+  * either I have some out-of-spec 33-round glock mags, or the tension of the mag release spring needs to be increased
+  * I have had instances after hundreds of rounds of the mag dropping out unintentionally from a light touch (notably with extended mag release)
+  * if my mag is in spec, this might be indicative of some wear in mag release spring region resulting in reduced tension
+  * if tension needs increase, this is accomplished by raising the "neck" portion of the channel
+* durability of screwhole region
+  * after probably more than 1,000 rounds I see a tiny crack in the right rear screw-stop offset. while this is ostensibly not yet of any functional significance, it could be a prelude to it.
+  * some users have reported failures of the rear screw region at very low round counts. I have not yet found the evidence compelling that it is a model over printer/protocol issue, in light of these not seeming to have followed the print protocol (e.g. wrong conical screws, seeming overtightening with bulging of frame top) and due to probable evidence of other print issues (e.g. slide lock spring not fitting).
+  * even if the above issues are related to user error, it seems there is room to carefully increase material in this region without compromising function--e.g.:
+    * slightly re-raising the frame top, but not to extent in original fmda (to leave clearance for reduced slide friction)
+    * slightly increasing diameter of screw offsets, with consideration of connecting them
+      * this will almost certaintly worsen the grip for some
+    * while this may mask other problems with novices' prints, such material redundancy might nonetheless make it easier for novices to go from start to functional firearm as well as potentially increase longevity beyond what I have tested.
+* fitment into holsters
+  * holsters like bladetech use the shape of the trigger guard to yield a tactile "click"
+  * no significant click with this version - either due to modifications to have trigger clear guard, or due to initial FMDA differences from stock g17
+* aesthetics
+  * trigger guard bump: when lower guard cut for increased trigger clearance introduced insightly bump that could be improved
+  * trigger housing tiny-hole: on moving laterally trigger housing, introduced thin wall that seems invariably sliced as a small hole in backstrap region. I am extremely skeptical of any functional significance given many frames/rounds I've tested without any issue in this region.
+  
+### to diy-rail or not diy-rail
+* I had the intention of abandoning this frame once p80-style rails were readily available, thinking this would come with the gst-9 frame
+* unfortunately gst-9 suddenly announced they would not ship rail kits without the frame, and stated they had no intention in the near future of selling the rails individually again
+* thus p80-style rails are effectively unavailable - I thus recommend against purchasing p80/gst9
+* this leaves two pathways to resolve the trigger issue above:
+  * figure out a way to get p80-style rear rails produced
+  * modify the diy rear rails to reduce friction - with consideration of:
+    * using thinner steel or aluminum rails
+* for better or worse, the diy avenue is much harder for novices compared to just wrapping a p80-style rail system around the trigger housing
+  * e.g. how can you infer from novices' pictures if their non-timing of the rails to the frame resulted in an offset that is resulting in cycling malfunctions? this is hard to see and help troubleshoot
+  
 ## feedback
 * please report if you have problems (or successes!), particularly if you have taken associated measurements of problem regions of your print re above modification goals
 * details and clarity are appreciated in feedback - e.g. reporting "0% modifications necessary" when you had to spend an hour filing and dremeling hurts the cause
 * feedback venues include:
-  * keybase: [det_disp](https://keybase.io/team/det_disp) & [fosscad](https://keybase.io/team/fosscad_org) groups
+  * keybase: [det_disp](https://keybase.io/team/det_disp) group
   * [github](https://github.com/d33pthought42)
