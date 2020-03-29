@@ -53,7 +53,7 @@ brought to you by d33pthought
   * [Lo Point](02_pistols/ProjectLopointbyCTRLPew/) [[trailer](https://gunstreamer.com/watch/lopoint-release-trailer_nqJfK8kwqhfC1qc.html)] [[spee.ch](https://spee.ch/@Deterrence-Dispensed:2/ProjectLopointbyCTRLPew)]
 
 ### rifle / subgun receivers
-* [FGC-9 by jstark1809](03_rifles_and_subguns/FGC-9/) [spee.ch](https://spee.ch/@Deterrence-Dispensed:2/FGC-9) [anonfile](https://anonfile.com/P8z8e8k4o8/FGC-9_zip)
+* [FGC-9 by jstark1809](03_rifles_and_subguns/FGC-9/) [[spee.ch](https://spee.ch/@Deterrence-Dispensed:2/FGC-9)] [[anonfile](https://anonfile.com/P8z8e8k4o8/FGC-9_zip)]
   * files here were downloaded from speech, hash checked, zip files extracted, and models signed
   * NOTE: part 7 media files omitted due to large file sizes
   * hash for zips as verified by jstark1809 on keybase on 3/28: `00905ecd2c9ff90298751b7a80569f7a`
